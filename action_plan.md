@@ -10,5 +10,16 @@
 * Duplicate content check
 * Canonical URL double check
 * Yahoo , Bing, Alexa set up
+* Create blog Categories, add to category description
 
+
+#Build Plan
+
+Email Templates - Per Product / Per Contact / Need content & design
+Favicon
+Home Screen Icons
+
+#Lucy
+
+Related Products
 

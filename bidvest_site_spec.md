@@ -1,6 +1,6 @@
 #Bidvest insurance Site Specification
 
-This document serves to outline the required deliverables for the Bidvest Insurgance Group Website
+This document serves to outline the required deliverables for the Bidvest Insurance Group Website
 
 Bidvest insurance has tasked Sugar to prepare a proposal regarding the development of a new website for the business.The current website has certain structural issues that are preventing it from being found in the search engines.The remit for this proposal is the following
 * Improve the layout of the site to better assist in the conversion of visitorsinto leads for the call centre.* Display Bidvest Insurance’s social campaigns, it’s corporate responsibilityin a complementary manner
@@ -19,9 +19,11 @@ We are obtaining two servers with LAMP architecture within Bidvest Firewalls
 * We will use Wordpress as it is intended with pages for static pages, posts, for blog posts, and create custom post types for products, in order to future proof the installation, and make it user friendly.
 * A number of page templates will need to be created.
 * Key client expectation are the site will not go down, and if does we have multiple quickly accessible back ups that we can bring online very quickly.
-* The site will need tone responsive and work on all modern smartphones. We have designed pages that fall back gracefully into  tablet view and mobile view.
+* Master / Staging and Live/Slave database set up ; will need to schedule daily, content changes in advance, approved then implemented via database replication.
+* The site will need to be responsive and work on all modern smartphones. We have designed pages that fall back gracefully into  tablet view and mobile view.
 * We will need to load as many scripts in the footer and via CDN if possible to increase speed of the website.
-* Conditional plugin loading on a per page basis
+* Conditional plugin loading on a per page basis - Don to Read / Feedback
+
 
 #Project Plan
 
@@ -35,14 +37,16 @@ We are gathering existing site content, and then optimising it for SEO.
 
 The client has access to this site and is making edits and changes to content as we progress.
 
+Under Travel Insurance - You will see a dropdown for alladin - We will be sending a custom style sheet.
+
 ##Plugins
 
 We should only install plugins we need to.
 
-* ACF
-* Gravity Forms
-* Yoast SEO
-* W3 Total Cache
+* ACF (Premium Version) - Bought
+* Gravity Forms (Premium Version)  - Bought
+* Yoast SEO (Premium Version) - To Buy
+* W3 Total Cache (Premium Version) - To Buy
 
 We should also only conditionally load certain plugins on the pages that require them as per these articles.
 
@@ -58,6 +62,7 @@ We should also only conditionally load certain plugins on the pages that require
 * Blog Category Template
 * Blog Single Post Template
 * Page Template
+* Iframe Template
 
 ##Sitewide Elements
 
@@ -115,7 +120,7 @@ Insert Image here
 
 The footer will be full width and will be divided into 4 column, basically 1/2/1 with custom menus ; so they can be easily managed from the backend. 
 
-It will also contain image sprites of social icons that will be used across the site in various colours. The social icons will also be sourced from Font Awesome, so perhaps
+It will also contain image sprites of social icons that will be used across the site in various colours.
 
 Thee will contain links to the various pages improving SEO.
 
@@ -137,7 +142,6 @@ We need to have breadcrumbs on each page to improve the SEO of each page and the
 
 * Can we add to home screen, as per this article?
 * [http://webdesign.tutsplus.com/articles/quick-tip-give-your-website-an-ios-home-screen-icon--webdesign-10067](http://webdesign.tutsplus.com/articles/quick-tip-give-your-website-an-ios-home-screen-icon--webdesign-10067)
-*  
 
 ##Forms , Conversion, Post Sale
 
@@ -179,19 +183,15 @@ These will have a full width google amp with a custom address icon.
 
 I have found a plugin / tutorial  that will do this, how we need it to work.
 
-####Plugin
-
-[https://premium.wpmudev.org/project/wordpress-google-maps-plugin/](https://premium.wpmudev.org/project/wordpress-google-maps-plugin/) - Issue with this is the ongoing subscription fee?
-
 ####Tutorial
 
-[]http://webdesignledger.com/tutorials/how-to-add-a-color-tinted-full-width-google-map-in-wordpress](http://webdesignledger.com/tutorials/how-to-add-a-color-tinted-full-width-google-map-in-wordpress)
+[http://webdesignledger.com/tutorials/how-to-add-a-color-tinted-full-width-google-map-in-wordpress](http://webdesignledger.com/tutorials/how-to-add-a-color-tinted-full-width-google-map-in-wordpress)
 
-I'm leaning towards this, as we can code it once and be done with it, and not worry about updates.
 
 ####Contact Form
 
-This contact form will need to gather the standard information fields, and route the notification using the gravity forms standard process. I'm concerned about having to change the email notification, and how gravity forms mangles the HTML on occasion. I do like how gravity forms keeps a copy of the message though.
+This contact form will need to gather the standard information fields, and route the notification using the gravity forms standard process.
+
 
 ####Email Response
 
@@ -203,15 +203,28 @@ The product template is the next most important part of the entire website.
 
 The website needs to covert customers, and this is where that will happen.
 
-The page is basically laid out  in 70/30 split and will need to be a custom post type, and have its own sidebar. We will need to set SEO options on these
+The page is basically laid out  in 70/30 split and will need to be a custom post type, and have its own sidebar. We will need to set SEO options on these.
 
 Within the page, we should, make heavy use of custom fields to ensure the pages are complete when we add new products, and to make it as bulletproof as possible.
 
 The client wants to use accordions that open and close on click to hide and show content. Once clicked they must remain open though.
+
+Generic Product Page / then specific ones on the ones with calculators
 
 Require fields
 
 * Product Title = Page Title
 * Product Detail
 * Product How It Works
-* 
+* Related Product per Product
+
+
+Testimonials
+
+Custom Post Type , show randomly , Product Categories, to show on slider
+
+
+Category Pages
+
+[http://premium.wpmudev.org/blog/cool-wordpress-category-pages
+](http://premium.wpmudev.org/blog/cool-wordpress-category-pages) 
